@@ -1,1 +1,3 @@
 # CountFingers
+
+Script uses various methods to first detect a hand via webcam, then count the number of fingers being held up on that hand. To detect the hand, the script currently trains a classifier to detect skin color. Another method (commented out in the script) uses a YCRCB color range to detect skin. The script then finds contours, and uses this to outline the hand. Next, convex hull and defects are used to detect the number of fingers. Another method (currently commented out) is to calculated the angle between the fingers using the defects and length from a defect to an outer convex point. 
